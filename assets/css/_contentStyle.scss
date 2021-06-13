@@ -1,0 +1,27 @@
+.content_section{
+  background-color: $min-color;
+  padding: 20px;
+  margin-top: 103px ;
+  margin-bottom: 40px ;
+  @extend%trans-4;
+
+  &.opne_menu{
+    @include en {
+      margin:103px 40px  40px 120px;
+    }
+    
+    @include ar {
+      margin:103px 120px 40px  40px ;
+    }
+  }
+
+  @include en {
+    margin:103px 40px  40px 345px;
+  }
+  
+  @include ar {
+    margin:103px 345px 40px  40px ;
+  }
+
+
+}

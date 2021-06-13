@@ -1,0 +1,160 @@
+.aside_section {
+  position: fixed;
+  width: 300px;
+  top: 70px;
+  background-color:  $white-color;
+  height: 100vh;
+  @extend%trans-4;
+  @include en {
+    left: 0;
+  }
+
+  @include ar {
+    right: 0;
+  }
+
+  .acount_box {
+    padding: 40px 20px 20px;
+    background-image: url("../img/user-img.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 4px 3px 0px rgba($min-color, .4);
+    .img_user {
+      .user_avatr {
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .name_box{
+      padding: 10px 0;
+      color: $gray-color;
+      .name_text{
+        font-size: 16px;
+        font-weight: 700;
+        
+      }
+      .email_text{
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 0 2px;
+      }
+      .company_text{
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+
+  }
+
+
+
+
+  .ul_aside_box{
+    padding: 14px 28px 61px;
+    // overflow-y: ;
+    overflow: hidden scroll;
+    height: 65vh;
+    ul{
+      li{
+        a{
+          padding: 10px 0;
+          font-size: 16px;
+          color: rgba($min-color, 1);
+          display: flex;
+          align-content: center;
+          @extend%trans-4;
+          .hiddin_box{
+            align-content: center;
+            padding: 0 10px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            @extend%trans-4;
+            i{
+              font-size: 14px;
+            }
+          }
+        }
+
+        &.has_chiled{
+          .sub_menu{
+            display: none;
+            margin: 0 0 10px;
+            padding: 0 10px 10px;
+            border-bottom: 1px solid rgba($sub-color, .8);
+            li{
+              a{
+                line-height: 10px;
+                i{
+                  padding: 0 6px;
+                }
+                font-size: 14px;
+                color: rgba($sub-color, .8);
+              }
+              &.has_chiled{
+                .sub_menu{
+                  border-bottom: 0;
+                  li{
+                    a{
+                      font-size: 13px;
+                      color: rgba($gray-color2, 1);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+
+
+
+      }
+    }
+  }
+
+
+.footer_box{
+  box-shadow: 0 -4px 3px 0px rgba($gray-color, .2);
+  position: absolute;
+  bottom: 69px;
+  left: 0;
+  background-color: $white-color;
+  .prag{
+    font-size: 12px;
+  padding: 20px;
+  color: rgba($gray-color2, 1);
+  a{
+    color:rgba($min-color, 1)
+  }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+  &.hover_class{
+    width: 100px;
+    &:hover{
+      width: 300px;
+    .name_box,.hiddin_box, .footer_box{
+      opacity: 1;
+      visibility: visible;
+    }
+    }
+    .name_box,.hiddin_box, .footer_box{
+      opacity: 0;
+      visibility: hidden;
+      @extend%trans-4;
+    }
+  }
+
+}

@@ -1,0 +1,147 @@
+.nav_section {
+  background-color: rgba($white-color, 1);
+  box-shadow: 0 8px 8px 0px rgba($black-color, 0.02);
+  padding: 10px 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  .right_box {
+    display: flex;
+    align-items: center;
+
+    .icon_box {
+      margin: 0 20px;
+      cursor: pointer;
+
+      &:hover {
+        .icon_line {
+          background-color: rgba($min-color, 1);
+        }
+      }
+
+      .icon_line {
+        width: 30px;
+        background-color: $gray-color2;
+        height: 3px;
+        width: 30px;
+        border-radius: 50px;
+        display: block;
+        @extend%trans-4;
+        margin: 6px 0;
+        &.active{
+        &:nth-child(2) {
+          width: 50%;
+        }
+        }
+      }
+    }
+  }
+
+  .left_box {
+    height: 100%;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100%;
+      margin: 0 40px;
+
+      li {
+        margin: 0 10px;
+
+        .icon_box {
+          i {
+            cursor: pointer;
+            color: $gray-color2;
+            @extend%trans-4;
+
+            &:hover {
+              color: rgba($min-color, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.search_box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: $white-color;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  top: -100%;
+  @extend%trans-4;
+  z-index: 99;
+  &.opneSearch {
+    top: 0;
+  }
+
+  .icon_close {
+    box-shadow: 0 0px 8px rgba($black-color, 0.2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid $black-color;
+    background: $white-color;
+    position: absolute;
+    bottom: -15px;
+    cursor: pointer;
+    @extend%trans-4;
+    @include en {
+      left: 2%;
+    }
+    @include ar {
+      right: 2%;
+    }
+    &:hover{
+      border-color: rgba($min-color, 1);
+      i {
+        color: rgba($min-color, 1);
+      }
+    }
+    i {
+      @extend%trans-4;
+      color: $black-color;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+
+  form {
+    width: 95%;
+
+    .form-group {
+      display: flex;
+      justify-content: space-around;
+
+      input {
+        width: 96%;
+        background-color: transparent;
+        color: black;
+        border: 0;
+        border-bottom: 1px solid rgba($gray-color2, 1);
+        border-radius: 0;
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+
+      button {
+        border: 0;
+        background-color: transparent;
+        font-size: 22px;
+      }
+    }
+  }
+}
